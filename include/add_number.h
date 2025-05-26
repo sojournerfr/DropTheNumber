@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** SOJOURNER PROJECT, 2025
 ** add_number.c
 ** File description:
 ** add_number

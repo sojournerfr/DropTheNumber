@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** SOJOURNER PROJECT, 2025
 ** main.c
 ** File description:
 ** This is the main file for the Drop The Number game

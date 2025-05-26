@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** SOJOURNER PROJECT, 2025
 ** handle_matrix.c
 ** File description:
 ** This file contains functions to handle the matrix

@@ -1,5 +1,5 @@
 ##
-## EPITECH PROJECT, 2024
+## SOJOURNER PROJECT, 2024
 ## Amazed
 ## File description:
 ## Makefile

@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** SOJOURNER PROJECT, 2025
 ** handle_game.c
 ** File description:
 ** This file contains functions to handle the game logic

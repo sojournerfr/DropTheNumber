@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** SOJOURNER PROJECT, 2025
 ** drop_the_number.c
 ** File description:
 ** DropTheNumber

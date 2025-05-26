@@ -8,7 +8,7 @@ DropTheNumber est un jeu de réflexion inspiré du célèbre 2048, où le but es
 - À chaque tour, un nombre aléatoire (2, 4, 8, 16 ou 32) apparaît.
 - Le joueur choisit dans quelle colonne (1 à 4) il souhaite faire tomber ce nombre.
 - Le nombre tombe en bas de la colonne choisie, ou sur le bloc déjà présent le plus bas.
-- Si deux blocs adjacents (horizontalement ou verticalement) portent le même nombre, ils fusionnent automatiquement en un seul bloc de valeur doublée.
+- Si deux blocs adjacents (horizontalement et ou verticalement) portent le même nombre, ils fusionnent automatiquement en un seul bloc de valeur doublée.
 - Les blocs fusionnés peuvent entraîner d'autres fusions en chaîne.
 - Le jeu se termine lorsque la première ligne de la grille contient au moins un bloc (plus de place pour faire tomber un nouveau nombre).
 
@@ -54,5 +54,4 @@ Après compilation, lancez le jeu avec :
 ```
 
 ## Auteur
-
-Projet réalisé dans le cadre de l'EPITECH 2025.
+david.caron@epitech.eu
