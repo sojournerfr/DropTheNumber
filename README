@@ -17,23 +17,39 @@ DropTheNumber est un jeu de réflexion inspiré du célèbre 2048, où le but es
 - À chaque tour, saisissez le numéro de la colonne (1 à 4) où vous souhaitez déposer le nombre.
 - Vous pouvez quitter le jeu à tout moment en tapant `quit` ou `exit`.
 
-## Compilation
+## Lancer le projet avec Docker
 
-Pour compiler le projet, utilisez la commande suivante à la racine du dépôt :
+Ce projet peut être compilé et lancé facilement grâce à Docker, sans rien installer d’autre que Docker lui-même.
 
-```sh
-make
-```
+### 1. Construire l’image Docker
 
-Le binaire généré s'appelle `DropTheNumber`.
-
-## Lancement du jeu
-
-Après compilation, lancez le jeu avec :
+Dans le dossier du projet, exécute :
 
 ```sh
-./DropTheNumber
+docker build -t dropthenumber .
 ```
+
+### 2. Lancer le jeu
+
+Toujours dans le dossier du projet :
+
+```sh
+docker run -it --rm dropthenumber
+```
+
+- `-it` : permet d’utiliser le terminal pour jouer.
+- `--rm` : supprime le conteneur après la partie.
+
+---
+
+**Remarque :**  
+Si tu modifies le code, pense à reconstruire l’image avec la commande `docker build`.
+
+---
+
+## Ancienne méthode
+
+L’ancienne méthode de compilation avec `make` reste possible si tu préfères compiler en local.
 
 ## Exemple de partie
 
