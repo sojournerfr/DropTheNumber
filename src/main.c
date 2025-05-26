@@ -61,18 +61,18 @@ int main(void)
     unsigned int **matrix = init_matrix();
     unsigned int number = 0;
     int cols = 0;
-    bool game = true;
 
     display_matrix(matrix);
-    while (game) {
+    while (is_over(matrix)) {
         number = get_rdnumber();
         printf("\n💡Incoming number: \033[34m%u\033[0m\n", number);
         cols = get_cols(number);
-        if (cols == -84)
-            break;
+        if (cols == -84) {
+            free_matrix(matrix, ROWS);
+            return 0;
+        }
         add_number(&matrix, number, cols);
         display_matrix(matrix);
-        game = is_over(matrix);
     }
     free_matrix(matrix, ROWS);
     printf("\033[1m\n Game Over !!!\033[0m\n");
