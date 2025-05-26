@@ -15,6 +15,7 @@
     #include <unistd.h>
     #include <math.h>
     #include <string.h>
+    #include <sys/stat.h>
 
     #include "handle_matrix.h"
     #include "add_number.h"

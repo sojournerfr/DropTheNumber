@@ -7,7 +7,24 @@
 
 #include "drop_the_number.h"
 
-static int get_cols(int nb)
+static int handle_input(char *input, unsigned int ***matrix, int *number)
+{
+    if (!strcmp(input, "quit") || !strcmp(input, "exit"))
+        return -84;
+    if (!strcmp(input, "reset")) {
+        *number = -1;
+        display_matrix(*matrix);
+        system("rm -f .highscore");
+    }
+    if (!strcmp(input, "restart") || !strcmp(input, "reset")) {
+        free_matrix(*matrix, ROWS);
+        *matrix = init_matrix();
+        return -1;
+    }
+    return 0;
+}
+
+static int get_cols(int nb, unsigned int ***matrix)
 {
     char *input = "NULL";
     char *temp = NULL;
@@ -23,8 +40,8 @@ static int get_cols(int nb)
             return -84;
         strcpy(temp, input);
         temp[strlen(temp) - 1] = '\0';
-        if (!strcmp(temp, "quit") || !strcmp(temp, "exit"))
-            return -84;
+        if (handle_input(temp, matrix, &status) != 0)
+            return handle_input(temp, matrix, &status);
         free(temp);
     }
     printf("\n");
@@ -66,7 +83,7 @@ int main(void)
     while (is_over(matrix)) {
         number = get_rdnumber();
         printf("\n💡Incoming number: \033[34m%u\033[0m\n", number);
-        cols = get_cols(number);
+        cols = get_cols(number, &matrix);
         if (cols == -84) {
             free_matrix(matrix, ROWS);
             return 0;

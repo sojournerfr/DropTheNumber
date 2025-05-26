@@ -12,10 +12,15 @@ DropTheNumber est un jeu de réflexion inspiré du célèbre 2048, où le but es
 - Les blocs fusionnés peuvent entraîner d'autres fusions en chaîne.
 - Le jeu se termine lorsque la première ligne de la grille contient au moins un bloc (plus de place pour faire tomber un nouveau nombre).
 
-## Commandes
+## Commandes intégrées du jeu
 
-- À chaque tour, saisissez le numéro de la colonne (1 à 4) où vous souhaitez déposer le nombre.
-- Vous pouvez quitter le jeu à tout moment en tapant `quit` ou `exit`.
+Pendant la partie, tu peux saisir les commandes suivantes à la place d’un numéro de colonne :
+
+- `quit` ou `exit` : quitte immédiatement le jeu.
+- `restart` : recommence une nouvelle partie (la grille est réinitialisée).
+- `reset` : réinitialise le highscore et la grille de jeu (nouvelle partie).
+
+Tape simplement l’une de ces commandes quand le jeu te demande de choisir une colonne.
 
 ## Lancer le projet avec Docker
 
