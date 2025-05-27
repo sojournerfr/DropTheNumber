@@ -14,7 +14,7 @@ static int handle_input(unsigned int ***matrix, char *input, int status)
     if (!strcmp(input, "quit") || !strcmp(input, "exit"))
         return -84;
     if (!strcmp(input, "reset"))
-        system("rm -f .highscore");
+        system("rm -f ./data/.highscore");
     if (!strcmp(input, "restart") || !strcmp(input, "reset")) {
         free_matrix(*matrix, ROWS);
         *matrix = init_matrix();

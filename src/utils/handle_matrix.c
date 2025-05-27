@@ -63,9 +63,9 @@ static int get_max_ptn(void)
     FILE *file = NULL;
     int highscore = 0;
 
-    if (stat(".highscore", &buffer) != 0)
+    if (stat("./data/.highscore", &buffer) != 0)
         return 0;
-    file = fopen(".highscore", "r");
+    file = fopen("./data/.highscore", "r");
     if (!file)
         return 0;
     if (fscanf(file, "%d", &highscore) != 1)
@@ -78,7 +78,7 @@ static void save_ptn(unsigned int **matrix)
 {
     int current_score = get_ptn(matrix);
     int highscore = get_max_ptn();
-    FILE *file = fopen(".highscore", "w");
+    FILE *file = fopen("./data/.highscore", "w");
 
     if (!file)
         return;

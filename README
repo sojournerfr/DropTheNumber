@@ -39,7 +39,7 @@ docker build -t dropthenumber .
 Toujours dans le dossier du projet :
 
 ```sh
-docker run -it --rm dropthenumber
+docker run -it --rm -v "$(pwd)/data:/app/data" dropthenumber
 ```
 
 - `-it` : permet d’utiliser le terminal pour jouer.
